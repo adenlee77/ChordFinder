@@ -1,14 +1,24 @@
-import React from 'react'
-
+import React, { useState } from 'react';
 import "./SearchResult.css";
 
 export const SearchResult = ({ result }) => {
-  return (
-    <div
-      className="search-result"
-      onClick={(e) => alert(result.link)}
-    >
-      {result.name}
-    </div>
-  );
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    if (selectedImage) {
+        return (
+            <div className="fullscreen-image-container">
+              <button className="back-button" onClick={() => setSelectedImage(null)}> Back </button>
+                <img src={selectedImage} alt="Selected" className="fullscreen-image" />
+            </div>
+        );
+    }
+
+    return (
+        <div 
+            className="search-result"
+            onClick={() => setSelectedImage(result.link)}
+        >
+            {result.name}
+        </div>
+    );
 };
