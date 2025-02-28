@@ -29,7 +29,7 @@ const [results, setResults] = useState([]);
         <div style = {{ fontSize: '30px'}}>Search for any Guitar Chord</div>
       </div>
       <p className="read-the-docs">
-        Click on the pick and guitar logos to visit our sheet music and guitars
+        Click on the pick and guitar logos to visit sheet music and guitars
       </p>
     </>
   )
