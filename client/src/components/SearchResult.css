@@ -19,10 +19,11 @@
 }
 
 .fullscreen-image {
+    position: absolute;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    cursor: pointer;
+    margin-top: 100px;
 }
 
 .back-button {
@@ -41,4 +42,31 @@
 
 .back-button:hover {
     background-color: rgba(255, 255, 255, 1);
+}
+
+.chord-name {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-55%);
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #333333, #B0B0B0);
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

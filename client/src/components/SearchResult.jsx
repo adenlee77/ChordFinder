@@ -7,6 +7,7 @@ export const SearchResult = ({ result }) => {
     if (selectedImage) {
         return (
             <div className="fullscreen-image-container">
+                <h1 className="chord-name">{result.name} Chord</h1>
               <button className="back-button" onClick={() => setSelectedImage(null)}> Back </button>
                 <img src={selectedImage} alt="Selected" className="fullscreen-image" />
             </div>
